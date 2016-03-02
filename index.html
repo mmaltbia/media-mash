@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Media Mash</title>
+    
+    <!--  FireBase  -->
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background: #000000;">
+        <div class="container">
+            <div class="navbar-header page-scroll white">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll bold upper white" href="#page-top">Media Mash</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll pt18" href="about.html">About</a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="search" name="query2" id="query2" class="form-control" value="" placeholder="Search">
+                    </div>
+                    <button id="search-btn2" type="button" class="btn btn-primary search-btn2">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             width="15px" viewBox="243.61 0 790.46 800" enable-background="new 243.61 0 790.46 800" xml:space="preserve"
+                             >
+                                    <path fill="#FFFFFF" d="M791.027,522.229c51.144-55.366,83.05-129.502,83.05-211.145C874.077,139.824,734.723,0,562.992,0S251.907,139.824,251.907,311.085c0,171.262,139.355,311.086,311.085,311.086c69.912,0,134.193-22.991,186.275-61.936
+                                    l231.319,231.319c5.63,5.63,12.668,8.445,19.706,8.445s14.545-2.815,19.707-8.445c10.793-10.793,10.793-28.621,0-39.883
+                                    L791.027,522.229z M308.212,311.085c0-140.293,114.018-254.78,254.78-254.78c140.294,0,254.78,114.018,254.78,254.78
+                                    c0,140.763-114.018,254.78-254.78,254.78S308.212,451.379,308.212,311.085z"/>
+                        </svg>
+
+                    </button>
+                </form>
+            </div>
+            <!-- /.navbar-expand -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Intro Section -->
+    <section style="background-image: url('img/bright.jpg'); background-size:cover; color: #fff; background-attachment: fixed;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 text-center" style="padding-top: 75px;">
+                    
+                    <h1>Search Images</h1>
+                    <h4>Enter a keyword below.</h4>
+                    <br><br>
+                    <div class="input-group">
+                        <input type="search" name="query" id="query" class="form-control" placeholder="Search" value="" required>
+                        <span class="input-group-btn">
+                            <button id="search-btn1" class="btn btn-default search-btn1" type="button">Go!</button>
+                        </span>
+                    </div><!-- /input-group -->
+                    <br><br><br>
+                </div><!-- /.col-lg-6 -->
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="images" class="row">
+
+                    </div>
+                </div> 
+            </div>
+            <div class="row suggested text-center">
+               <br><br><br>
+                <h3>Enter a keyword in the search box to see results populate here.</h3>
+                <h4>"Sunset" is a good one.</h4>
+<!--
+                <br><br>
+                <div class="col-lg-6 col-lg-offset-3">
+                    <div class="col-xs-4 text-center" onclick="">
+                        <img src="img/bird.jpg" alt="">
+                    </div>
+                    <div class="col-xs-4">
+                        <img src="img/bird.jpg" alt="">
+                    </div>
+                    <div class="col-xs-4">
+                        <img src="img/bird.jpg" alt="">
+                    </div>
+                </div>
+-->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="background: rgba(0, 0, 0, 0.8);color:#fff;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Additional Details</h4>
+                </div>
+                <div class="modal-body">
+                    
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/script.js"></script>
+    
+    <script>
+        var url = "https://lmd-media-manager.firebaseio.com";
+        var firebaseRef = new Firebase(url);
+        
+        function getAdditional(e){
+            e.preventDefault();
+            $('.modal-body').empty();
+            $('.modal-body').append('<img src="'+ e.target.currentSrc +'" width="100%">');
+            $('.modal-body').append('<br><br><span>Source: <a href="'+ e.srcElement.dataset.link +'" target="_blank">'+ e.srcElement.dataset.source +'</span></a>');
+            $('.modal-body').append('<br><br><p><b>Tags:</b></p><textarea placeholder="tags" class="textbox" width="100%">' + getTags(event) + '</textarea>');
+            $('.modal-body').append('<br><br><button class="api-add btn btn-primary">Add to API</button>');
+            $('.modal-body').append('<br><br><input value="" placeholder="API" class="textbox" style="display:none">');
+            
+            function getTags(e){
+                var tags = e.srcElement.dataset.tags;
+                return tags;
+            }
+            
+            function convertFileToDataURLviaFileReader(url, callback){
+                var xhr = new XMLHttpRequest();
+                xhr.responseType = 'blob';
+                xhr.onload = function() {
+                    var reader  = new FileReader();
+                    reader.onloadend = function () {
+                        callback(reader.result);
+                    }
+                    reader.readAsDataURL(xhr.response);
+                };
+                xhr.open('GET', url);
+                xhr.send();
+            }
+            
+            $('.api-add').on('click', function(event){
+                console.log(e.srcElement.src);
+                var imageUrl = e.srcElement.src;
+                var convertType = 'FileReader';    
+                var convertFunction =  convertFileToDataURLviaFileReader;
+                var imagesRef = firebaseRef.child("images");
+                convertFunction(imageUrl, function(base64Img){
+                    $('.textbox')
+                        .val(base64Img)
+                        .end()
+                        .show()
+                    
+                    $(function() {
+                        imagesRef.push({
+                            "image-data": base64Img
+                        });
+                    });
+                });
+
+                event.preventDefault();
+                
+            });
+        }    
+    </script>
+
+</body>
+
+</html>

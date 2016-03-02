@@ -1,0 +1,151 @@
+/*!
+ * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Lato';
+    font-weight: 300;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+/*****  NAVBAR  ****/
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 5px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+        border: none;
+    }
+
+    .top-nav-expand {
+        padding: 30px;
+    }
+    
+    .navbar-form {
+        visibility: hidden;
+    }
+    
+    .navbar-form-not-toggled {
+        visibility: hidden;
+        opacity:0;
+        -webkit-transition: visibility 0.5s, opacity 1s linear;
+        -moz-transition: visibility 0.5s, opacity 1s linear;
+        transition: visibility 0.5s, opacity 1s linear;
+    }
+    
+    .navbar-form-toggled {
+        visibility: visible;
+        opacity:1;
+        -webkit-transition: visibility 0s, opacity 1s linear;
+        -moz-transition: visibility 0s, opacity 1s linear;
+        transition: visibility 0s, opacity 1s linear;
+    }
+}
+
+
+
+/*****  END NAVBAR  ****/
+
+h1 {
+    font-weight: 700;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.white {
+    color: #fff;
+}
+
+.pt18 {
+    font-size: 18px;
+}
+
+.row {
+    margin-top: 25px;
+}
+
+input {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    color: #333;
+}
+
+ul li {
+    display: inline;
+
+}
+
+#social-media-list {
+    padding: 0px;
+    padding-bottom: 15px;
+}
+.animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+input#query2 {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: solid 2px #fff;
+    margin-right: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+button#search-btn1{
+    background: rgba(0, 0, 0, 0.75);
+    border-color: #000;
+    color: #fff;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 3px;
+    padding-top: 8px;
+}
